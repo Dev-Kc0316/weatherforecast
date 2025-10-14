@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+:root{
+    --bg: #0d1117;
+    --card: #161b22;
+    --accent: #58a6ff;
+    --text: #e6edf3;
+    --muted: #8b949e;
+}
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+.container{
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+.search-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+input{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--accent);
+    background: var(--card);
+    color: var(--text);
+    width: 250px;
+    outline: none;
+}
+button{
+    padding: 10px 16px;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background: #0074e0;
+}
+.error{
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+.forecast-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.card{
+    background: var(--card);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s;
+}
+.card:hover{
+   transform: translateY(-5px); 
+}
+.card img{
+    width: 80px;
+    height: 80px;
+}
+.card h3{
+    margin: 10px 0 5px;
+}
+.card p{
+    color: var(--muted);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container{
+        width: 95%;
+        margin-top: 30px;
+    }
+    .forecast-container{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    button, input{
+        width: 100%;
+    }
+    .search-box{
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+@media (max-width: 480px) {
+    .title{
+        font-size: 1.6rem;
+    }
+    .card{
+        padding: 15px;
+    }
+    .card img{
+        width: 70px;
+        height: 70px;
+    }
+    .forecast-container{
+        gap: 10px;
+    }
+}
