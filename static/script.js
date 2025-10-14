@@ -24,7 +24,7 @@ async function getForecast() {
 
     try {
         // Fetch weather data from backend
-        const response = await fetch(`http://127.0.0.1:5000/api/weather?city=${encodeURIComponent(city)}`);
+        const response = await fetch(`/api/weather?city=${encodeURIComponent(city)}`);
         const contentType = response.headers.get("content-type");
 
         // Validate that the backend returned JSON
