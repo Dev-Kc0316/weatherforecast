@@ -26,7 +26,7 @@ def get_weather():
         return jsonify({"error": "City is required"}), 400
 
     #Get coordinates from city name
-    geo_url = "http://api.openweathermap.org/geo/1.0/direct"
+    geo_url = "https://api.openweathermap.org/geo/1.0/direct"
     geo_params = {"q": city, "limit": 1, "appid": OPENWEATHER_API_KEY}
     geo_response = requests.get(geo_url, params=geo_params)
     geo_data = geo_response.json()
