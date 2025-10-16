@@ -173,6 +173,11 @@ button:hover {
     width: 100%;
   }
 
+  input, textarea{
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
   .search-box {
     flex-direction: column;
     align-items: stretch;
@@ -181,6 +186,11 @@ button:hover {
 @media (max-width: 480px) {
   .title {
     font-size: 1.6rem;
+  }
+
+  input, textarea{
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
   }
 
   .card {
